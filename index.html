@@ -2,54 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio-Supannika</title>
-  <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-900 text-white">
 
-  <nav class="fixed top-0 w-full px-6 py-4 shadow-md">
-    <div>
-      <section class="link flex items-center justify-center text-white">
-      <button onclick="scrollToHome()" class="hover:bg-gray-400 px-20 rounded-2xl">home</button>
-      <button onclick="scrollToProject()" class="hover:bg-gray-400 px-20 rounded-2xl">project</button>
-      <button onclick="scrollToSkills()" class="hover:bg-gray-400 px-20 rounded-2xl">skills</button>
-      <button onclick="scrollToCertificates()" class="hover:bg-gray-400 px-20 rounded-2xl">certificates</button>
-      <button onclick="scrollToActivities()" class="hover:bg-gray-400 px-20 rounded-2xl">Activities</button>
+  <nav class="fixed top-0 w-full bg-gray-800 px-4 py-3 shadow-md z-50">
+    <div class="max-w-6xl mx-auto">
+      <section class="flex flex-wrap justify-center gap-2 md:gap-6">
+        <button onclick="scrollToHome()" class="hover:bg-gray-600 px-6 py-2 rounded-2xl transition">Home</button>
+        <button onclick="scrollToProject()" class="hover:bg-gray-600 px-6 py-2 rounded-2xl transition">Project</button>
+        <button onclick="scrollToSkills()" class="hover:bg-gray-600 px-6 py-2 rounded-2xl transition">Skills</button>
+        <button onclick="scrollToCertificates()" class="hover:bg-gray-600 px-6 py-2 rounded-2xl transition">Certificates</button>
+        <button onclick="scrollToActivities()" class="hover:bg-gray-600 px-6 py-2 rounded-2xl transition">Activities</button>
       </section>
     </div>
   </nav>
 
-  <header>
-    <div class="flex items-center justify-center">
-      <img src="./images/myface.jpg" alt="Profile" class="w-60 h-50 rounded-full object-cover shadow-lg">
-      <div class="text-white px-6">
-        <h1 class="text-4xl font-bold mb-4 mt-5">Supannika Khanenok</h1>
-        <p class="mb-4">This is my website Portfolio.</p>
-        <button onclick="scrollToFooter()" class="bg-blue-500 px-4 py-2 rounded-3xl">Contact Me</button>
+  <header class="pt-20 pb-12 max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
+      <img src="./images/myface.jpg" alt="Profile" class="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover shadow-lg" />
+      <div class="text-center md:text-left max-w-xl">
+        <h1 class="text-4xl font-bold mb-4">Supannika Khanenok</h1>
+        <p class="mb-6">This is my website Portfolio.</p>
+        <button onclick="scrollToFooter()" class="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded-3xl transition">Contact Me</button>
       </div>
     </div>
   </header>
 
-  <section class="project">
-    <h2 class="text-2xl font-bold mb-4">Project</h2>
-    <div class="project-card rounded-2xl shadow-lg">
-      <h3 class="text-xl font-bold mb-2">Web Application for grocery shops</h3>
-      <p class="break-words">แอปช่วยวางแผนชีวิต พัฒนาด้วย React และ Firebasehlkldgllgfgggggggggggggggggggtkrmgkrmgkmrkkmgksemgksrkgmsgmrekgporogmflemflekfeokfokkkkkkkkkkkkkkkkkfmdknguejgnrmkmgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</p>
-      <button onclick="" class="border-b border-blue-500 text-black">Read More</button>
-      <img src="images/todo-preview.png" alt="ภาพตัวอย่างหน้าเว็บแอปฯร้านขายของชำ" width="300">
-      <br/>
-      <button onclick="window.open('https://github.com/MissisA/grocery-web-app')" class="bg-blue-500 text-white px-4 py-2 rounded-3xl">GitHub</button>
+  <section class="project max-w-6xl mx-auto px-4 mb-12">
+    <h2 class="text-2xl font-bold mb-6">Project</h2>
+    <div class="project-card bg-white text-gray-900 rounded-2xl shadow-lg p-6">
+      <h3 class="text-xl font-bold mb-3">Web Application for grocery shops</h3>
+      <p class="mb-4 break-words max-h-48 overflow-auto">
+        แอปช่วยวางแผนชีวิต พัฒนาด้วย React และ Firebasehlkldgllgfgggggggggggggggggggtkrmgkrmgkmrkkmgksemgksrkgmsgmrekgporogmflemflekfeokfokkkkkkkkkkkkkkkkkfmdknguejgnrmkmgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</p>
+      <button class="border-b border-blue-500 text-blue-700 hover:text-blue-900 cursor-pointer mb-4">Read More</button>
+      <br />
+      <img src="images/todo-preview.png" alt="ภาพตัวอย่างหน้าเว็บแอปฯร้านขายของชำ" class="w-full max-w-sm rounded-lg shadow-md mb-4" />
+      <button onclick="window.open('https://github.com/MissisA/grocery-web-app')" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-3xl transition">
+        GitHub
+      </button>
     </div>
   </section>
 
-  <footer id="footer">
-     <div>
-          <p>Contact</p>
-          <p>Email: supannika546@gmail.com</p>
-          <p>Phone: 066-025-9712</p>
-     </div>
+  <footer id="footer" class="bg-gray-800 text-center text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 space-y-2">
+      <p class="font-semibold text-lg">Contact</p>
+      <p>Email: supannika546@gmail.com</p>
+      <p>Phone: 066-025-9712</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
