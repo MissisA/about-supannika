@@ -8,12 +8,11 @@ body {
 
 /* nav */
 nav {
-  @apply bg-[#1e202c] text-white bg-opacity-70;
+  @apply text-white;
 }
 
 /* header */
 header {
-  /* ปรับ padding จาก 11rem เยอะเกิน */
   padding: 6rem 2rem;
   @apply bg-[#0a1e54];
 }
@@ -35,5 +34,5 @@ header {
 
 /* footer */
 footer {
-  @apply bg-[#31323e] text-white bg-opacity-70 text-center p-4;
+  @apply text-white text-center p-4;
 }
