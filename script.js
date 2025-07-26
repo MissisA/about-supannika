@@ -24,3 +24,45 @@ function scrollToActivities() {
 function scrollToFooter() {
   document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
 }
+
+let certIndex = 0;
+const slider = document.getElementById("certificateSlider");
+
+  function updateCertSlider() {
+    const slide = slider.children[0];
+    const slideWidth = slide.getBoundingClientRect().width;
+    const offset = certIndex * slideWidth;
+    slider.style.transform = `translateX(-${offset}px)`;
+  }
+
+  function nextCert() {
+    const total = slider.children.length;
+    certIndex = (certIndex + 1) % total;
+    updateCertSlider();
+  }
+
+  function prevCert() {
+    const total = slider.children.length;
+    certIndex = (certIndex - 1 + total) % total;
+    updateCertSlider();
+  }
+
+  // เรียกเมื่อโหลดหน้าเสร็จ
+  window.addEventListener("load", updateCertSlider);
+
+  // เรียกเมื่อเปลี่ยนขนาดจอ
+  window.addEventListener("resize", updateCertSlider);
+
+const toggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("menu-mobile");
+
+toggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+const mobileButtons = mobileMenu.querySelectorAll("button");
+mobileButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+});
